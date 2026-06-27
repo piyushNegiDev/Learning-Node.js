@@ -1,21 +1,5 @@
-1782536347861: / New Req Received
-1782536374594: /about New Req Received
-1782536633969: /.well-known/appspecific/com.chrome.devtools.json New Req Received
-1782536636403: /about New Req Received
-1782536636469: /.well-known/appspecific/com.chrome.devtools.json New Req Received
-1782536637484: /about New Req Received
-1782536637592: /.well-known/appspecific/com.chrome.devtools.json New Req Received
-1782536725742: /about.asdfa New Req Received
-1782536725813: /.well-known/appspecific/com.chrome.devtools.json New Req Received
-1782537325684: /about.asdfa New Req Received
-1782537325777: /.well-known/appspecific/com.chrome.devtools.json New Req Received
-1782537408894: /about?myname=piyush New Req Received
-1782537408963: /.well-known/appspecific/com.chrome.devtools.json New Req Received
-1782537583156: /search?search_query=lol New Req Received
-1782537583216: /.well-known/appspecific/com.chrome.devtools.json New Req Received
-1782537593783: /search?search_query=javascript New Req Received
-1782537593863: /.well-known/appspecific/com.chrome.devtools.json New Req Received
-1782537617874: /search?search_query=javascript New Req Received
-1782537617952: /.well-known/appspecific/com.chrome.devtools.json New Req Received
-1782537624757: /search?search_query=javascript New Req Received
-1782537635932: /search?search_query=javascript New Req Received
+1782540305547: GET / New Req Received
+1782540305672: GET /.well-known/appspecific/com.chrome.devtools.json New Req Received
+1782540470918: GET /signuo New Req Received
+1782540470998: GET /.well-known/appspecific/com.chrome.devtools.json New Req Received
+1782540473650: GET /signup New Req Received
