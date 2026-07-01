@@ -1,8 +1,23 @@
 const express = require("express");
 const users = require("./MOCK_DATA.json");
+const fs = require("fs");
+const { json } = require("stream/consumers");
 
 const app = express();
 const PORT = 8000;
+
+//Middleware - Plugin
+app.use(express.urlencoded({ extended: false }));
+
+app.use((req, res, next) => {
+  fs.appendFile(
+    "log.txt",
+    `${Date.now()}: ${req.ip}: ${req.method}: ${req.path}\n`,
+    (err, data) => {
+      next();
+    },
+  );
+});
 
 // Routes
 app.get("/users", (req, res) => {
@@ -25,6 +40,8 @@ app.get("/users", (req, res) => {
 
 // REST API
 app.get("/api/users", (req, res) => {
+  res.setHeader("X-MyName", "Piyush Negi"); // Custom Headers
+  // Always add X to custom headers
   return res.json(users);
 });
 
@@ -46,7 +63,12 @@ app
 
 app.post("/api/users", (req, res) => {
   //TODO: Create new user
-  res.json({ status: "pending" });
+  const body = req.body;
+  users.push({ id: users.length + 1, ...body });
+  fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err) => {
+    console.log(err);
+    res.json({ status: "success", id: users.length });
+  });
 });
 
 app.listen(PORT, () => {
